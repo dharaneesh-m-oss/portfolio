@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Dharaneesh M</title>
+  <meta name="description" content="Electronics projects, embedded systems, IoT projects by Dharaneesh M">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  
+  <style>
+    /* Custom Styles - No external CSS needed */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 70px;
+      background-color: #f8f9fa;
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .project-section {
+      padding: 60px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    
+    .section-title p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    .project-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      background: white;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .project-img-container {
+      height: 220px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+    
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .project-card:hover .project-img {
+      transform: scale(1.05);
+    }
+    
+    .project-content {
+      padding: 25px;
+    }
+    
+    .project-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .badge-hackathon {
+      background: linear-gradient(45deg, #28a745, #20c997);
+      color: white;
+    }
+    
+    .badge-academic {
+      background: linear-gradient(45deg, #ffc107, #fd7e14);
+      color: #212529;
+    }
+    
+    .badge-mini {
+      background: linear-gradient(45deg, #6c757d, #495057);
+      color: white;
+    }
+    
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #333;
+      line-height: 1.4;
+    }
+    
+    .project-desc {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .category-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #444;
+      margin: 40px 0 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #007bff;
+    }
+    
+    .achievement-badge {
+      background: #e7f1ff;
+      color: #0056b3;
+      border: 1px solid #b3d4ff;
+    }
+    
+    footer {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.2rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: #20c997;
+    }
+    
+    .copyright {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 20px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 60px;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .project-img-container {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" style="color: #007bff;">
+        <i class="bi bi-cpu me-2"></i>Dharaneesh M
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-person me-1"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html"><i class="bi bi-gear me-1"></i> Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html"><i class="bi bi-file-text me-1"></i> Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html"><i class="bi bi-laptop me-1"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="project-section">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2><i class="bi bi-laptop me-2"></i>My Projects Portfolio</h2>
+        <p>Showcasing practical engineering skills through hackathon, academic, and mini projects in embedded systems and IoT</p>
+      </div>
+
+      <!-- Hackathon Projects -->
+      <h3 class="category-title"><i class="bi bi-trophy me-2"></i>Hackathon Projects</h3>
+      <div class="row">
+        <!-- LoRa Emergency System -->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/D0z0hmSq/How-Lo-Ra-Sensor-Work.webp" class="project-img" alt="LoRa Emergency System">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-hackathon">Hackathon Project</span>
+              <h4 class="project-title">LoRa-Based Emergency Communication System</h4>
+              <p class="project-desc">Built a decentralized, internet-free emergency network using LoRa mesh communication. Enabled real-time GPS location sharing for disaster rescue operations. Designed for flood, earthquake, and rural emergency response.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge achievement-badge">Smart India Hackathon - Selected</span>
+                <span class="badge bg-secondary">LoRa</span>
+                <span class="badge bg-secondary">GPS</span>
+                <span class="badge bg-secondary">Mesh Network</span>
+              </div>
+              <div class="mt-3">
+                <a href="https://i.postimg.cc/D0z0hmSq/How-Lo-Ra-Sensor-Work.webp" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-eye me-1"></i> View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CureVox -->
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/qvmTfQ8D/pixta-65057607-L-1-scaled.webp" class="project-img" alt="CureVox Medical Alert System">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-hackathon">Hackathon Project</span>
+              <h4 class="project-title">CureVox - Medical Emergency Alert System</h4>
+              <p class="project-desc">Developed an IoT-based automatic medical emergency alert system that sends live location and patient vitals directly to hospitals and caregivers. Focused on reducing emergency response time and saving lives.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge achievement-badge">Mumbai Hackathon - Top 3000/20,000+</span>
+                <span class="badge bg-secondary">IoT</span>
+                <span class="badge bg-secondary">Healthcare</span>
+                <span class="badge bg-secondary">Sensors</span>
+              </div>
+              <div class="mt-3">
+                <a href="https://i.postimg.cc/qvmTfQ8D/pixta-65057607-L-1-scaled.webp" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-eye me-1"></i> View Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Projects -->
+      <h3 class="category-title"><i class="bi bi-mortarboard me-2"></i>Academic Projects</h3>
+      <div class="row">
+        <!-- Thermal Power Shutoff -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/zGydBks2/2-Figure1-1.png" class="project-img" alt="Thermal Power Shutoff System">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-academic">Academic Project</span>
+              <h4 class="project-title">Thermal-Based Power Shutoff System</h4>
+              <p class="project-desc">Automatic power cut-off during overheating to prevent fire hazards and equipment damage. Uses thermal sensors to monitor temperature and automatically disconnects power when unsafe levels are detected.</p>
+              <div class="mt-3">
+                <a href="https://i.postimg.cc/zGydBks2/2-Figure1-1.png" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-diagram-3 me-1"></i> View Circuit
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Battery Indicator -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/SNdss666/R.jpg" class="project-img" alt="Battery Voltage Indicator">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-academic">Academic Project</span>
+              <h4 class="project-title">Battery Voltage Level Indicator</h4>
+              <p class="project-desc">Real-time battery level display system using LED indicator circuits and voltage monitoring. Provides visual indication of battery status with multi-color LEDs for different voltage levels.</p>
+              <div class="mt-3">
+                <a href="https://i.postimg.cc/SNdss666/R.jpg" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-diagram-3 me-1"></i> View Circuit
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fridge Alarm -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/ZnqQLzQ0/fridge-door-alarm-circuit-1071x720.jpg" class="project-img" alt="Fridge Door Alarm System">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-academic">Academic Project</span>
+              <h4 class="project-title">Fridge Door Alarm System</h4>
+              <p class="project-desc">Alert system that notifies when refrigerator door is left open to prevent energy loss and food spoilage. Uses magnetic sensors and audible alerts to remind users to close the door.</p>
+              <div class="mt-3">
+                <a href="https://i.postimg.cc/ZnqQLzQ0/fridge-door-alarm-circuit-1071x720.jpg" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-diagram-3 me-1"></i> View Circuit
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini Projects -->
+      <h3 class="category-title"><i class="bi bi-tools me-2"></i>Mini Projects</h3>
+      <div class="row">
+        <!-- Street Light -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/t4RzZNLQ/Automatic-Street-Light-using-LDR-and-relay-circuit-diagram.webp" class="project-img" alt="Automatic Street Light">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-mini">Mini Project</span>
+              <h4 class="project-title">Automatic Street Light</h4>
+              <p class="project-desc">Energy-efficient street lighting system with automatic daylight sensing using LDR. Turns on automatically at dusk and off at dawn.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water Level -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/Dwbwc9V9/water-level-indicator-sensor-Circuit-Diagram-Schematic.jpg" class="project-img" alt="Water Level Indicator">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-mini">Mini Project</span>
+              <h4 class="project-title">Water Level Indicator</h4>
+              <p class="project-desc">Liquid level monitoring and alert system for tanks and containers with visual and audible indicators.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Robot -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/w38GYRvp/circuit-diagram-7bGur-Qx-Xfh.jpg" class="project-img" alt="Obstacle Avoiding Robot">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-mini">Mini Project</span>
+              <h4 class="project-title">Obstacle Avoiding Robot</h4>
+              <p class="project-desc">Autonomous robot with ultrasonic sensors for navigation and obstacle avoidance in real-time.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visitor Counter -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="https://i.postimg.cc/ZKHMMnmJ/digital-visitor-counter.png" class="project-img" alt="Digital Visitor Counter">
+            </div>
+            <div class="project-content">
+              <span class="project-badge badge-mini">Mini Project</span>
+              <h4 class="project-title">Digital Visitor Counter</h4>
+              <p class="project-desc">People counting system using IR sensors and digital display for accurate visitor tracking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h4>Dharaneesh M</h4>
+          <p class="mb-0">Electronics & Communication Engineering Student</p>
+          <p class="mb-0">Madras Institute of Technology, Anna University</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-links mb-3">
+            <a href="mailto:dharaneesh984224@gmail.com" title="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dharaneesh-m-b16527316" target="_blank" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/Dharaneesh-707" target="_blank" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="tel:+917708222195" title="Phone">
+              <i class="bi bi-telephone"></i>
+            </a>
+          </div>
+          <p class="copyright mb-0">© 2024 Dharaneesh M. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Simple script for smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Add active class to current page in nav
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      navLinks.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
